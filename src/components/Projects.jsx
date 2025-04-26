@@ -18,7 +18,7 @@ const Projects = () => {
         <div>
           <h2 className="text-xl font-semibold text-gray-800 mb-2">LODIFHI Website</h2>
           <p className="text-sm text-gray-600">A clean layout for a Private Hospital with a modern and responsive design.</p>
-          <div className="mt-3 text-xs text-gray-400 flex justify-between">React · Tailwind · Netlify <a href="https://lodifhi.netlify.app" target="_blank" class=" mt-4 bg-yellow-400 text-gray-900 px-4 py-2 rounded-md text-sm font-semibold">Visit Site ›</a></div>
+          <div className="mt-3 text-xs text-gray-400 flex justify-between">React · Tailwind · Netlify <a href="https://lodifhi.netlify.app" target="_blank" class=" mt-4 hover:bg-[#1A2341] hover:text-white bg-yellow-400 text-gray-900 px-4 py-2 rounded-md text-sm font-semibold transition  duration-300 ease-in-out">Visit Site ›</a></div>
         </div>
       </div>
     
