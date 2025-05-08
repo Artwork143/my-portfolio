@@ -1,7 +1,7 @@
 export default function About() {
   return (
-    <div className="min-h-screen bg-[#1A2341] text-white px-6 md:px-16 lg:px-32 2xl:px-105">
-      <h1 className=" font-bold text-3xl text-white py-5">Contact</h1>
+    <div className="min-h-screen bg-[#1e2749] text-white px-6 md:px-16 lg:px-32 2xl:px-105">
+      <h1 className=" font-bold text-3xl text-white py-5">About Me</h1>
 
       <div className="grid md:grid-cols-3 gap-10 items-start py-10">
         {/* Left Column */}
@@ -11,16 +11,26 @@ export default function About() {
             alt="Profile"
             className="rounded-full w-48 h-48 object-cover mb-6 border-2 border-white"
           />
-          <p className="text-lg leading-relaxed">
-            I'm a Web Developer specializing in creating fast,
-            responsive, and user-centric web applications. I build scalable solutions that not only look great
-            but perform seamlessly across devices. I'm currently open to
-            freelance opportunities where I can collaborate, innovate, and bring
-            impactful ideas to life. Let's build something great together.
+          <p className="text-md leading-relaxed">
+            I'm a Web Developer specializing in creating fast, responsive, and
+            user-centric web applications. I build scalable solutions that not
+            only look great but perform seamlessly across devices. I'm currently
+            open to freelance opportunities where I can collaborate, innovate,
+            and bring impactful ideas to life. Let's build something great
+            together.
           </p>
           <p className="mt-4 text-sm text-gray-400">
             📍 Negros Occidental, Philippines
           </p>
+          <a
+            href="public\Miñano_Resume.pdf"
+            download="Miñano_Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-3 py-1 bg-blue-600 rounded-full text-sm border border-white/20 hover:bg-blue-800 cursor-pointer mt-5"
+          >
+            Download Resume
+          </a>          
         </div>
 
         {/* Right Column */}
@@ -60,7 +70,6 @@ export default function About() {
                 "JavaScript",
                 "ReactJS",
                 "Tailwind CSS",
-                "Netlify",
                 "Laravel",
                 "Blade",
                 "PHP",
@@ -68,9 +77,7 @@ export default function About() {
                 "NodeJS",
                 "ExpressJS",
                 "MongoDB",
-                "Git",
                 "GitHub",
-                "Vercel",
                 "Figma",
                 "Photoshop",
                 "Premiere Pro",

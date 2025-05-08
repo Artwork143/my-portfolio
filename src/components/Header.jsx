@@ -22,7 +22,7 @@ const Header = () => {
         {/* Logo */}
         <div className="text-2xl font-bold text-black dark:text-white cursor-pointer">
           {/* Replace with your logo */}
-          <span className={`${scrolled ? "text-[#1A2341]" : "text-white"}`}>
+          <span className={`${scrolled ? "text-[#1e2749]" : "text-white"}`}>
             DM
           </span>
         </div>
@@ -31,13 +31,13 @@ const Header = () => {
         <div className="group space-y-1 cursor-pointer">
           <span
             className={`block h-0.5 transition-all duration-300
-      ${scrolled ? "bg-[#1A2341]" : "bg-white"}
+      ${scrolled ? "bg-[#1e2749]" : "bg-white"}
       w-7 group-hover:w-4
     `}
           ></span>
           <span
             className={`block h-0.5 mt-2 ml-3 group-hover:ml-0 transition-all duration-300
-      ${scrolled ? "bg-[#1A2341]" : "bg-white"}
+      ${scrolled ? "bg-[#1e2749]" : "bg-white"}
       w-4 group-hover:w-7
     `}
           ></span>

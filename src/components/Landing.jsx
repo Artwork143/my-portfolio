@@ -1,10 +1,8 @@
 import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFacebook } from "@fortawesome/free-brands-svg-icons";
 
 const Landing = () => {
   return (
-    <section className="min-h-screen flex items-center bg-[#1A2341] text-white px-6 md:px-16 lg:px-32 2xl:px-105">
+    <section className="min-h-screen flex items-center bg-[#1e2749] text-white px-6 md:px-16 lg:px-32 2xl:px-105">
       <div className="max-w-3xl">
         <p className="text-base text-white mb-2">Hi, I'm</p>
         <h1 className="text-5xl md:text-6xl font-bold mb-2">
@@ -24,7 +22,7 @@ const Landing = () => {
         </p>
 
         <div className="flex flex-row gap-2">
-          <div className="hover:inset-shadow-sm hover:inset-shadow-indigo-500 mt-5 w-auto px-3 h-auto transition duration-700 ease-in-out hover:bg-white hover:text-[#1A2341] border-2 border-white rounded-r-xl hover:rounded-full flex items-center justify-center group">
+          <div className="hover:inset-shadow-sm hover:inset-shadow-indigo-500 mt-5 w-auto px-3 h-auto transition duration-700 ease-in-out hover:bg-white hover:text-[#1e2749] border-2 border-white rounded-r-xl hover:rounded-full flex items-center justify-center group">
             <div
               onClick={() => {
                 const contactSection = document.getElementById("contact");
@@ -38,7 +36,7 @@ const Landing = () => {
             </div>
           </div>
 
-          <div className="mt-5 w-10 h-10 bg-blue-900 hover:bg-white hover:text-[#1A2341] border-2 border-white rounded-xl flex items-center justify-center transition duration-300 ease-in-out hover:inset-shadow-sm hover:inset-shadow-indigo-500">
+          <div className="mt-5 w-10 h-10 bg-blue-900 hover:bg-white hover:text-[#1e2749] border-2 border-white rounded-xl flex items-center justify-center transition duration-300 ease-in-out hover:inset-shadow-sm hover:inset-shadow-indigo-500">
             <a
               href="https://www.facebook.com/dionisio.t.minano"
               target="_blank"
@@ -48,7 +46,7 @@ const Landing = () => {
             </a>
           </div>
 
-          <div className="mt-5 w-10 h-10 bg-blue-600 hover:bg-white hover:text-[#1A2341] border-2 border-white rounded-xl flex items-center justify-center transition duration-300 ease-in-out hover:inset-shadow-sm hover:inset-shadow-indigo-500">
+          <div className="mt-5 w-10 h-10 bg-blue-600 hover:bg-white hover:text-[#1e2749] border-2 border-white rounded-xl flex items-center justify-center transition duration-300 ease-in-out hover:inset-shadow-sm hover:inset-shadow-indigo-500">
             <a
               href="https://www.linkedin.com/in/dionisio-mi%C3%B1ano-96081227b"
               target="_blank"
