@@ -16,56 +16,56 @@ const GraphicDesignPortfolio = () => {
           {/* Sample image slots */}
           <div className="bg-white rounded-md shadow p-3 flex flex-col">
             <img
-              src="/public/Ultrasound.jpg"
+              src="/Ultrasound.jpg"
               alt="Design 1"
               className="rounded shadow"
             />
           </div>
           <div className="bg-white rounded-md shadow p-3 flex flex-col">
             <img
-              src="/public/Men's Health Check.jpg"
+              src="/Men's Health Check.jpg"
               alt="Design 2"
               className="rounded shadow object-cover "
             />
           </div>
           <div className="bg-white rounded-md shadow p-3 flex flex-col">
             <img
-              src="/public/Pharmacy.jpg"
+              src="/Pharmacy.jpg"
               alt="Design 2"
               className="rounded shadow h-full"
             />
           </div>
           <div className="bg-white rounded-md shadow p-3 flex flex-col">
             <img
-              src="/public/Tuli2025.jpg"
+              src="/Tuli2025.jpg"
               alt="Design 2"
               className="rounded shadow h-full"
             />
           </div>
           <div className="bg-white rounded-md shadow p-3 flex flex-col">
             <img
-              src="/public/Our Services.jpg"
+              src="/Our Services.jpg"
               alt="Design 2"
               className="rounded shadow h-full"
             />
           </div>
           <div className="bg-white rounded-md shadow p-3 flex flex-col">
             <img
-              src="/public/Blood Letting CORAZON 2025.jpg"
+              src="/Blood Letting CORAZON 2025.jpg"
               alt="Design 2"
               className="rounded shadow h-full"
             />
           </div>
           <div className="bg-white rounded-md shadow p-3 flex flex-col">
             <img
-              src="/public/XRAYads.jpg"
+              src="/XRAYads.jpg"
               alt="Design 2"
               className="rounded shadow h-full"
             />
           </div>
           <div className="bg-white rounded-md shadow p-3 flex flex-col">
             <img
-              src="/public/fluevaccine2024.jpg"
+              src="/fluevaccine2024.jpg"
               alt="Design 2"
               className="rounded shadow h-full"
             />
