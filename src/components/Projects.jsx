@@ -236,17 +236,17 @@ const Projects = () => {
             </div>
           )}
 
-          <div className="bg-white rounded-md shadow p-3 flex flex-col">
+          <div className="bg-[#1e2749]/80 rounded-md shadow p-3 flex flex-col">
             <img
               src="/Graphic.png"
               alt="Lodifhi Website"
               className="object-cover rounded h-60 w-full mb-4"
             />
             <div>
-              <h2 className="text-xl font-semibold text-gray-800 mb-2">
+              <h2 className="text-xl font-semibold text-white mb-2">
                 Graphic Design Portfolio
               </h2>
-              <p className="text-sm text-gray-600">
+              <p className="text-sm text-white">
                 This showcases my work in creating engaging social media
                 graphics, promotional materials, and branding designs.
               </p>
