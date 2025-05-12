@@ -1,6 +1,21 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 const Landing = () => {
+   const roles = ["Web Developer.", "Graphic Designer.", "Virtual Assistant.", "Tech Support."];
+  const [index, setIndex] = useState(0);
+  const [animate, setAnimate] = useState(false);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setAnimate(true); // trigger animation
+      setTimeout(() => {
+        setIndex((prev) => (prev + 1) % roles.length);
+        setAnimate(false); // reset animation
+      }, 700); // duration must match the animation below
+    }, 2000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section className="min-h-screen flex items-center bg-[#1e2749] text-white px-6 md:px-16 lg:px-32 2xl:px-105">
       <div className="max-w-3xl">
@@ -8,13 +23,16 @@ const Landing = () => {
         <h1 className="text-5xl md:text-6xl font-bold mb-2">
           Dionisio Miñano<span className="text-transparent">.</span>
         </h1>
-        {/* <h2 className="text-xl md:text-2xl font-medium text-gray-400 mb-6">
-            I'm a Software Engineer at <span className="text-yellow-400">Clearlink.</span>
-          </h2> */}
-        <h2 className="text-xl md:text-2xl font-medium text-gray-400 mb-6">
-          I'm a <span className="text-yellow-400">Freelance</span> Web
-          Developer.
-        </h2>
+        <h2 className="text-xl md:text-2xl font-medium text-gray-400 mb-6 h-8 overflow-hidden">
+      I'm a Freelance{" "}
+      <span
+        className={`inline-block text-yellow-400 transform transition-transform duration-700 ease-in-out ${
+          animate ? "-translate-y-3 opacity-0" : "translate-y-0 opacity-100"
+        }`}
+      >
+        {roles[index]}
+      </span>
+    </h2>
         <p className="text-gray-400 text-base leading-relaxed">
           I'm currently focused on expanding my experience
           <br />
