@@ -5,7 +5,7 @@ import About from "./components/About";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import Landing from "./components/Landing";
-import Footer from "./components/Footer";
+import Footer from "./components/footer";
 import GraphicDesignPortfolio from "./components/GraphicDesignPortfolio";
 
 import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";

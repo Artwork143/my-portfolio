@@ -37,7 +37,10 @@ const Header = ({ onScrollTo }) => {
     <header className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${scrolled ? "bg-white shadow-md" : "bg-[#1e2749]"}`}>
       <div className="mx-auto px-6 md:px-10 py-4 flex items-center justify-between">
         <div className="text-2xl font-bold cursor-pointer">
-          <span className={`${scrolled ? "text-[#1e2749]" : "text-white"}`}>DM</span>
+        <img src={scrolled ? "/public/DM.png" : "/public/DM2.png"} className="h-8 w-8 transition-all duration-300">
+
+        </img>
+          {/* <span className={`${scrolled ? "text-[#1e2749]" : "text-white"}`}>DM</span> */}
         </div>
 
         {isPortfolioPage ? (
