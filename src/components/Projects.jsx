@@ -133,7 +133,7 @@ const Projects = () => {
               <div className="bg-white rounded-lg max-w-2xl w-full p-4 relative">
                 <button
                   onClick={() => setShowModal(false)}
-                  className="absolute top-2 right-4 bg-red-500 hover:bg-red-600 text-white text-xl font-bold w-6 h-6 pb-1 flex items-center justify-center rounded-sm"
+                  className="absolute top-2 right-4 bg-red-500 hover:bg-red-600 text-white text-xl font-bold w-6 h-6 pb-1 flex items-center justify-center rounded-sm hover:scale-80 transition duration-300 ease-in-out"
                 >
                   &times;
                 </button>
@@ -207,7 +207,7 @@ const Projects = () => {
               <div className="bg-white rounded-lg max-w-2xl w-full p-4 relative">
                 <button
                   onClick={() => setShowModal2(false)}
-                  className="absolute top-2 right-4 bg-red-500 hover:bg-red-600 text-white text-xl font-bold w-6 h-6 pb-1 flex items-center justify-center rounded-sm"
+                  className="absolute top-2 right-4 bg-red-500 hover:bg-red-600 text-white text-xl font-bold w-6 h-6 pb-1 flex items-center justify-center rounded-sm hover:scale-80 transition duration-300 ease-in-out"
                 >
                   &times;
                 </button>
@@ -238,7 +238,7 @@ const Projects = () => {
 
           <div className="bg-white rounded-md shadow p-3 flex flex-col">
             <img
-              src="public/lodifhiWebsite.png"
+              src="public/Graphic.png"
               alt="Lodifhi Website"
               className="object-cover rounded h-60 w-full mb-4"
             />

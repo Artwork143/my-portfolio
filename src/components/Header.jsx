@@ -72,16 +72,16 @@ const Header = ({ onScrollTo }) => {
       >
         <ul className="flex flex-col gap-3 text-[#1e2749] font-medium items-end">
           <li className="w-full hover:bg-[#1e2749] hover:text-white">
-            <button onClick={() => handleNavClick("home")} className="block px-10 py-2 w-full text-right">Home</button>
+            <button onClick={() => handleNavClick("home")} className="block px-10 py-2 w-full text-right font-bold">Home</button>
           </li>
           <li className="w-full hover:bg-[#1e2749] hover:text-white">
-            <button onClick={() => handleNavClick("projects")} className="block px-10 py-2 w-full text-right">Projects</button>
+            <button onClick={() => handleNavClick("projects")} className="block px-10 py-2 w-full text-right font-bold">Projects</button>
           </li>
           <li className="w-full hover:bg-[#1e2749] hover:text-white">
-            <button onClick={() => handleNavClick("about")} className="block px-10 py-2 w-full text-right">About</button>
+            <button onClick={() => handleNavClick("about")} className="block px-10 py-2 w-full text-right font-bold">About</button>
           </li>
           <li className="w-full hover:bg-[#1e2749] hover:text-white">
-            <button onClick={() => handleNavClick("contact")} className="block px-10 py-2 w-full text-right">Contact</button>
+            <button onClick={() => handleNavClick("contact")} className="block px-10 py-2 w-full text-right font-bold">Contact</button>
           </li>
         </ul>
       </nav>
