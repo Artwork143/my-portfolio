@@ -9,17 +9,17 @@ const Projects = () => {
   const [showModal2, setShowModal2] = useState(false);
 
   const images = [
-    "public/cdrrmoHome.png",
-    "public/cdrrmoHome2.png",
-    "public/cdrrmoMedical.png",
-    "public/cdrrmoDSS.png",
+    "/cdrrmoHome.png",
+    "/cdrrmoHome2.png",
+    "/cdrrmoMedical.png",
+    "/cdrrmoDSS.png",
   ];
 
   const images2 = [
-    "public/AIDMAN.png",
-    "public/AIDMANHome.png",
-    "public/AIDMANInventory.png",
-    "public/AIDMANCalamity.png",
+    "/AIDMAN.png",
+    "/AIDMANHome.png",
+    "/AIDMANInventory.png",
+    "/AIDMANCalamity.png",
   ];
 
   const nextImage = () => {
@@ -49,7 +49,7 @@ const Projects = () => {
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-15">
           <div className="bg-white rounded-md shadow p-3 flex flex-col">
             <img
-              src="public/lodifhiWebsite.png"
+              src="/lodifhiWebsite.png"
               alt="Lodifhi Website"
               className="object-cover rounded h-60 w-full mb-4"
             />
@@ -238,7 +238,7 @@ const Projects = () => {
 
           <div className="bg-white rounded-md shadow p-3 flex flex-col">
             <img
-              src="public/Graphic.png"
+              src="/Graphic.png"
               alt="Lodifhi Website"
               className="object-cover rounded h-60 w-full mb-4"
             />

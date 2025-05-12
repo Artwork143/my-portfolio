@@ -7,7 +7,7 @@ export default function About() {
         {/* Left Column */}
         <div className="flex flex-col items-center text-center md:col-span-1">
           <img
-            src="public\Me.jpg" // Replace with actual image
+            src="/Me.jpg" // Replace with actual image
             alt="Profile"
             className="rounded-full w-48 h-48 object-cover mb-6 border-2 border-white"
           />
@@ -23,7 +23,7 @@ export default function About() {
             📍 Negros Occidental, Philippines
           </p>
           <a
-            href="public\Miñano_Resume.pdf"
+            href="/Miñano_Resume.pdf"
             download="Miñano_Resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
