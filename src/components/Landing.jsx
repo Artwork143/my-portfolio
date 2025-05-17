@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import AnimatedSection from "./AnimatedSection";
+import { ArrowRight } from "lucide-react";
 
 const Landing = () => {
    const roles = ["Web Developer.", "Graphic Designer.", "Virtual Assistant.", "Tech Support."];
@@ -50,10 +51,11 @@ const Landing = () => {
                   contactSection.scrollIntoView({ behavior: "smooth" });
                 }
               }}
-              className="text-3xl cursor-pointer -translate-x-1 group-hover:translate-x-3 transition duration-300 ease-in-out"
+              className="text-3xl cursor-pointer -translate-x-1 group-hover:translate-x-3 transition duration-300 ease-in-out flex-row"
             >
-              Contact <span className="group-hover:invisible">&gt;</span>
+              Contact 
             </div>
+            <span className="group-hover:invisible transition duration-300 ease-in-out"><ArrowRight/></span> 
           </div>
 
           <div className="mt-5 w-10 h-10 bg-blue-900 hover:bg-white hover:text-[#1e2749] border-2 border-white rounded-xl flex items-center justify-center transition duration-300 ease-in-out hover:inset-shadow-sm hover:inset-shadow-indigo-500">

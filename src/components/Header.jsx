@@ -34,6 +34,34 @@ const Header = ({ onScrollTo }) => {
     window.location.href = "/";
   };
 
+  const [activeSection, setActiveSection] = useState(null);
+
+ useEffect(() => {
+  const timeout = setTimeout(() => {
+    const sections = ["home", "projects", "about", "contact"];
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id);
+          }
+        });
+      },
+      { threshold: 0.3 }
+    );
+
+    sections.forEach((id) => {
+      const section = document.getElementById(id);
+      if (section) observer.observe(section);
+    });
+
+    return () => observer.disconnect();
+  }, 500); // wait for content to mount
+
+  return () => clearTimeout(timeout);
+}, []);
+
+
   return (
     <motion.header
       initial={{ y: -80, opacity: 0 }}
@@ -52,41 +80,25 @@ const Header = ({ onScrollTo }) => {
           {/* <span className={`${scrolled ? "text-[#1e2749]" : "text-white"}`}>DM</span> */}
         </div>
         {!isPortfolioPage && (
-          <ul className={`hidden md:flex gap-8 text-lg font-semibold ${scrolled ? "text-[#1e2749]" : "text-white"} items-center`}>
-            <li>
-              <button
-                onClick={() => handleNavClick("home")}
-                className="hover:text-blue-500 border-l-2 pl-2 border-transparent hover:border-l-blue-500 transition duration-300 ease-in-out"
-              >
-                Home
-              </button>
-            </li>
-            <li>
-              <button
-                onClick={() => handleNavClick("projects")}
-                className="hover:text-blue-500 border-l-2 pl-2 border-transparent hover:border-l-blue-500 transition duration-300 ease-in-out"
-              >
-                Projects
-              </button>
-            </li>
-            <li>
-              <button
-                onClick={() => handleNavClick("about")}
-                className="hover:text-blue-500 border-l-2 pl-2 border-transparent hover:border-l-blue-500 transition duration-300 ease-in-out"
-              >
-                About
-              </button>
-            </li>
-            <li>
-              <button
-                onClick={() => handleNavClick("contact")}
-                className="hover:text-blue-500 border-l-2 pl-2 border-transparent hover:border-l-blue-500 transition duration-300 ease-in-out"
-              >
-                Contact
-              </button>
-            </li>
-          </ul>
-        )}
+  <ul className={`hidden md:flex gap-8 text-lg font-semibold ${scrolled ? "text-[#1e2749]" : "text-white"} items-center`}>
+    {["home", "projects", "about", "contact"].map((section) => (
+      <li key={section}>
+        <button
+          onClick={() => handleNavClick(section)}
+          className={`border-l-2 pl-2 transition duration-300 ease-in-out
+            ${
+              activeSection === section
+                ? "text-blue-500 border-l-blue-500"
+                : "border-transparent hover:text-blue-500 "
+            }`}
+        >
+          {section.charAt(0).toUpperCase() + section.slice(1)}
+        </button>
+      </li>
+    ))}
+  </ul>
+)}
+
         {isPortfolioPage ? (
           <button onClick={handleBack} className="transition-all">
             <ArrowLeft
@@ -126,52 +138,36 @@ const Header = ({ onScrollTo }) => {
 
       {/* Slide-down nav */}
       <nav
-        className={`
-          transition-all duration-300 ease-in-out transform
-          ${
-            menuOpen && !isPortfolioPage
-              ? "translate-x-0 opacity-100 pointer-events-auto"
-              : "-translate-x-full opacity-0 pointer-events-none"
-          }
-          absolute top-full right-0 w-full z-40
-          ${scrolled ? "bg-gray-200" : "bg-white"} shadow-md pt-2 pb-4
-        `}
-      >
-        <ul className="flex flex-col gap-3 text-[#1e2749] font-medium items-end">
-          <li className="w-full hover:bg-[#1e2749] hover:text-white">
-            <button
-              onClick={() => handleNavClick("home")}
-              className="block px-10 py-2 w-full text-right font-bold"
-            >
-              Home
-            </button>
-          </li>
-          <li className="w-full hover:bg-[#1e2749] hover:text-white">
-            <button
-              onClick={() => handleNavClick("projects")}
-              className="block px-10 py-2 w-full text-right font-bold"
-            >
-              Projects
-            </button>
-          </li>
-          <li className="w-full hover:bg-[#1e2749] hover:text-white">
-            <button
-              onClick={() => handleNavClick("about")}
-              className="block px-10 py-2 w-full text-right font-bold"
-            >
-              About
-            </button>
-          </li>
-          <li className="w-full hover:bg-[#1e2749] hover:text-white">
-            <button
-              onClick={() => handleNavClick("contact")}
-              className="block px-10 py-2 w-full text-right font-bold"
-            >
-              Contact
-            </button>
-          </li>
-        </ul>
-      </nav>
+  className={`
+    transition-all duration-300 ease-in-out transform
+    ${
+      menuOpen && !isPortfolioPage
+        ? "translate-x-0 opacity-100 pointer-events-auto"
+        : "-translate-x-full opacity-0 pointer-events-none"
+    }
+    absolute top-full right-0 w-full z-40
+    ${scrolled ? "bg-gray-200" : "bg-white"} shadow-md pt-2 pb-4
+  `}
+>
+  <ul className="flex flex-col gap-3 text-[#1e2749] font-medium items-end">
+    {["home", "projects", "about", "contact"].map((section) => (
+      <li key={section} className="w-full">
+        <button
+          onClick={() => handleNavClick(section)}
+          className={`block px-10 py-2 w-full text-right font-bold transition
+            ${
+              activeSection === section
+                ? "bg-[#1e2749] text-white"
+                : "hover:bg-[#1e2749] hover:text-white"
+            }`}
+        >
+          {section.charAt(0).toUpperCase() + section.slice(1)}
+        </button>
+      </li>
+    ))}
+  </ul>
+</nav>
+
     </motion.header>
   );
 };

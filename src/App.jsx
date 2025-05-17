@@ -37,10 +37,10 @@ function MainContent() {
 
       {!isPortfolioPage && (
         <>
-          <div ref={landingRef}><Landing /></div>
-          <div ref={projectsRef}><Projects /></div>
-          <div ref={aboutRef}><About /></div>
-          <div ref={contactRef}><Contact /></div>
+          <div ref={landingRef} id="home" className="min-h-screen"><Landing /></div>
+          <div ref={projectsRef} id="projects" className="min-h-screen"><Projects  /></div>
+          <div ref={aboutRef} id="about" className="min-h-screen"><About /></div>
+          <div ref={contactRef} id="contact" className="min-h-screen"><Contact /></div>
         </>
       )}
 
