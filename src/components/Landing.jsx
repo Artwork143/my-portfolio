@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import AnimatedSection from "./AnimatedSection";
 
 const Landing = () => {
    const roles = ["Web Developer.", "Graphic Designer.", "Virtual Assistant.", "Tech Support."];
@@ -18,6 +19,7 @@ const Landing = () => {
 
   return (
     <section className="min-h-screen flex items-center bg-[#1e2749] text-white px-6 md:px-16 lg:px-32 2xl:px-105">
+    <AnimatedSection delay={0.1}>
       <div className="max-w-3xl">
         <p className="text-base text-white mb-2">Hi, I'm</p>
         <h1 className="text-5xl md:text-6xl font-bold mb-2">
@@ -75,6 +77,7 @@ const Landing = () => {
           </div>
         </div>
       </div>
+      </AnimatedSection>
     </section>
   );
 };
