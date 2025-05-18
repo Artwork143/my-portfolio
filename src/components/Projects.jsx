@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { Link } from 'react-router-dom';
+import AnimatedSection from "./AnimatedSection";
 
 const Projects = () => {
   const [showModal, setShowModal] = useState(false);
@@ -45,7 +46,11 @@ const Projects = () => {
   return (
     <section className="min-h-screen flex bg-[#f9f6ee] text-white px-6 md:px-16 lg:px-32 2xl:px-105">
       <div class="max-w-7xl mx-auto">
+      <AnimatedSection delay={0.1}>
         <h1 className=" font-bold text-3xl text-[#1e2749] py-5">Projects</h1>
+        </AnimatedSection>
+        
+<AnimatedSection delay={0.4}>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-15">
           <div className="bg-white rounded-md shadow p-3 flex flex-col">
             <img
@@ -262,6 +267,7 @@ const Projects = () => {
             </div>
           </div>
         </div>
+        </AnimatedSection>
       </div>
     </section>
   );

@@ -31,42 +31,42 @@ const GraphicDesignPortfolio = () => {
           <div className="bg-white rounded-md shadow p-3 flex flex-col">
             <img
               src="/Pharmacy.jpg"
-              alt="Design 2"
+              alt="Design 3"
               className="rounded shadow h-full"
             />
           </div>
           <div className="bg-white rounded-md shadow p-3 flex flex-col">
             <img
               src="/Tuli2025.jpg"
-              alt="Design 2"
+              alt="Design 4"
               className="rounded shadow h-full"
             />
           </div>
           <div className="bg-white rounded-md shadow p-3 flex flex-col">
             <img
-              src="/Our Services.jpg"
-              alt="Design 2"
+              src="/X-mas.jpg"
+              alt="Design 5"
               className="rounded shadow h-full"
             />
           </div>
           <div className="bg-white rounded-md shadow p-3 flex flex-col">
             <img
               src="/Blood Letting CORAZON 2025.jpg"
-              alt="Design 2"
+              alt="Design 6"
               className="rounded shadow h-full"
             />
           </div>
           <div className="bg-white rounded-md shadow p-3 flex flex-col">
             <img
               src="/XRAYads.jpg"
-              alt="Design 2"
+              alt="Design 7"
               className="rounded shadow h-full"
             />
           </div>
           <div className="bg-white rounded-md shadow p-3 flex flex-col">
             <img
               src="/fluevaccine2024.jpg"
-              alt="Design 2"
+              alt="Design 8"
               className="rounded shadow h-full"
             />
           </div>
