@@ -1,7 +1,7 @@
-import React from "react";
 import { useState } from "react";
 import { Link } from 'react-router-dom';
 import AnimatedSection from "./AnimatedSection";
+import AnimatedWrapper from "./AnimatedWrapper";
 
 const Projects = () => {
   const [showModal, setShowModal] = useState(false);
@@ -50,9 +50,8 @@ const Projects = () => {
         <h1 className=" font-bold text-3xl text-[#1e2749] py-5">Projects</h1>
         </AnimatedSection>
         
-<AnimatedSection delay={0.4}>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-15">
-          <div className="bg-white rounded-md shadow p-3 flex flex-col">
+        <AnimatedWrapper direction="left" className="bg-white rounded-md shadow p-3 flex flex-col">
             <img
               src="/lodifhiWebsite.png"
               alt="Lodifhi Website"
@@ -89,8 +88,8 @@ const Projects = () => {
                 </a>
               </div>
             </div>
-          </div>
-          <div className="bg-white rounded-md shadow p-3 group hover:-translate-y-1 transition">
+          </AnimatedWrapper>
+          <AnimatedWrapper direction="right" className="bg-white rounded-md shadow p-3 group hover:-translate-y-1 transition">
             <div className="relative mb-4">
               <img
                 src={images[0]}
@@ -130,8 +129,7 @@ const Projects = () => {
                 </li>
               </ul>
             </div>
-          </div>
-
+          </AnimatedWrapper>
           {/* Modal */}
           {showModal && (
             <div className="fixed inset-0 bg-black/70 z-50 flex items-center justify-center">
@@ -166,8 +164,7 @@ const Projects = () => {
               </div>
             </div>
           )}
-
-          <div className="bg-white rounded-md shadow p-3 group hover:-translate-y-1 transition">
+          <AnimatedWrapper direction="left" className="bg-white rounded-md shadow p-3 group hover:-translate-y-1 transition">
             <div className="relative mb-4">
               <img
                 src={images2[0]}
@@ -205,8 +202,7 @@ const Projects = () => {
                 </li>
               </ul>
             </div>
-          </div>
-
+          </AnimatedWrapper>
           {showModal2 && (
             <div className="fixed inset-0 bg-black/70 z-50 flex items-center justify-center">
               <div className="bg-white rounded-lg max-w-2xl w-full p-4 relative">
@@ -241,7 +237,7 @@ const Projects = () => {
             </div>
           )}
 
-          <div className="bg-[#1e2749]/80 rounded-md shadow p-3 flex flex-col">
+          <AnimatedWrapper direction="right" className="bg-[#1e2749]/80 rounded-md shadow p-3 flex flex-col">
             <img
               src="/Graphic.png"
               alt="Lodifhi Website"
@@ -265,9 +261,8 @@ const Projects = () => {
                 </Link>
               </div>
             </div>
-          </div>
+          </AnimatedWrapper>
         </div>
-        </AnimatedSection>
       </div>
     </section>
   );

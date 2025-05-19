@@ -2,17 +2,12 @@ import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
 
-/**
- * Reusable scroll-reveal wrapper with optional scale, fade, yOffset, and staggered children.
- */
 export default function AnimatedSection({
   children,
-  className = "",
   delay = 0,
   duration = 0.6,
   yOffset = 40,
-  scale = false,
-  stagger = false,
+  className = "",
 }) {
   const controls = useAnimation();
   const [ref, inView] = useInView({
@@ -26,51 +21,24 @@ export default function AnimatedSection({
     }
   }, [controls, inView]);
 
-  const parentVariants = {
-    hidden: {},
-    visible: {
-      transition: {
-        staggerChildren: stagger ? 0.15 : 0,
-        delayChildren: delay,
-      },
-    },
-  };
-
-  const childVariants = {
-    hidden: {
-      opacity: 0,
-      y: yOffset,
-      scale: scale ? 0.95 : 1,
-    },
+  const variants = {
+    hidden: { opacity: 0, y: yOffset },
     visible: {
       opacity: 1,
       y: 0,
-      scale: 1,
-      transition: {
-        duration,
-        ease: "easeOut",
-      },
+      transition: { duration, delay, ease: "easeOut" },
     },
   };
 
   return (
     <motion.div
       ref={ref}
-      variants={stagger ? parentVariants : childVariants}
       initial="hidden"
       animate={controls}
+      variants={variants}
       className={className}
     >
-      {stagger
-        ? // Wrap children in motion.divs when staggering
-          Array.isArray(children)
-            ? children.map((child, i) => (
-                <motion.div key={i} variants={childVariants}>
-                  {child}
-                </motion.div>
-              ))
-            : <motion.div variants={childVariants}>{children}</motion.div>
-        : children}
+      {children}
     </motion.div>
   );
 }
