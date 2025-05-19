@@ -1,40 +1,53 @@
-import { motion, useAnimation } from "framer-motion";
-import { useInView } from "react-intersection-observer";
-import { useEffect } from "react";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 
-const getVariants = (direction) => ({
-  hidden: {
-    opacity: 0,
-    x: direction === "left" ? -100 : direction === "right" ? 100 : 0,
-  },
-  visible: {
-    opacity: 1,
-    x: 0,
-  },
-});
+const AnimatedWrapper = ({ children, direction = "left" }) => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: false, amount: 0.3 });
 
-const AnimatedWrapper = ({ children, className = "", delay = 0, direction = "left" }) => {
-  const controls = useAnimation();
-  const [ref, inView] = useInView({ triggerOnce: false });
+  const containerVariants = {
+    hidden: {},
+    visible: {
+      transition: {
+        staggerChildren: 0.2,
+        delayChildren: 0.1,
+      },
+    },
+  };
 
-  useEffect(() => {
-    if (inView) {
-      controls.start("visible");
-    } else {
-      controls.start("hidden");
-    }
-  }, [inView, controls]);
+  const childVariants = {
+    hidden: {
+      opacity: 0,
+      x: direction === "left" ? -100 : direction === "right" ? 100 : 0,
+    },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        duration: 0.8,
+        ease: "easeOut",
+      },
+    },
+  };
 
   return (
     <motion.div
       ref={ref}
-      className={className}
+      variants={containerVariants}
       initial="hidden"
-      animate={controls}
-      variants={getVariants(direction)}
-      transition={{ duration: 0.6, delay }}
+      animate={isInView ? "visible" : "hidden"}
+      className="overflow-hidden"
     >
-      {children}
+      {Array.isArray(children) ? (
+        children.map((child, index) => (
+          <motion.div variants={childVariants} key={index}>
+            {child}
+          </motion.div>
+        ))
+      ) : (
+        // If single child, assume it's a fragment or container with motion children
+        <motion.div variants={childVariants}>{children}</motion.div>
+      )}
     </motion.div>
   );
 };

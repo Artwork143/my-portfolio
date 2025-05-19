@@ -12,14 +12,16 @@ export default function AnimatedSection({
   const controls = useAnimation();
   const [ref, inView] = useInView({
     threshold: 0.2,
-    triggerOnce: true,
+    triggerOnce: false, // Allow it to trigger multiple times
   });
 
   useEffect(() => {
     if (inView) {
       controls.start("visible");
+    } else {
+      controls.start("hidden");
     }
-  }, [controls, inView]);
+  }, [inView, controls]);
 
   const variants = {
     hidden: { opacity: 0, y: yOffset },

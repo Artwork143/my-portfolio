@@ -51,7 +51,8 @@ const Projects = () => {
         </AnimatedSection>
         
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-15">
-        <AnimatedWrapper direction="left" className="bg-white rounded-md shadow p-3 flex flex-col">
+        <AnimatedWrapper direction="left">
+          <div className="bg-white rounded-md shadow p-3 flex flex-col">
             <img
               src="/lodifhiWebsite.png"
               alt="Lodifhi Website"
@@ -82,23 +83,25 @@ const Projects = () => {
                 <a
                   href="https://lodifhi.netlify.app"
                   target="_blank"
-                  class="mt-2 hover:bg-[#1e2749] hover:text-white bg-yellow-400 text-gray-900 px-4 py-2 rounded-md text-sm font-semibold transition  duration-300 ease-in-out"
+                  class="my-[6px] hover:bg-[#1e2749] hover:text-white bg-yellow-400 text-gray-900 px-4 py-2 rounded-md text-sm font-semibold transition  duration-300 ease-in-out"
                 >
                   Visit Site ›
                 </a>
               </div>
             </div>
+          </div>
           </AnimatedWrapper>
-          <AnimatedWrapper direction="right" className="bg-white rounded-md shadow p-3 group hover:-translate-y-1 transition">
+          <AnimatedWrapper direction="right">
+          <div className="bg-white rounded-md shadow p-3 group hover:-translate-y-1 transition">
             <div className="relative mb-4">
               <img
                 src={images[0]}
                 alt="Management System with DSS"
-                className="object-cover h-60 w-full rounded transition group-hover:brightness-50"
+                className="object-cover h-60 w-full brightness-50 md:brightness-100 rounded transition group-hover:brightness-50"
               />
               <button
                 onClick={() => setShowModal(true)}
-                className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition"
+                className="absolute inset-0 flex items-center justify-center md:opacity-0 group-hover:opacity-100 transition"
               >
                 <span className="text-white text-lg font-semibold bg-[#1e2749] px-4 py-2 rounded">
                   View Details
@@ -129,6 +132,7 @@ const Projects = () => {
                 </li>
               </ul>
             </div>
+          </div>
           </AnimatedWrapper>
           {/* Modal */}
           {showModal && (
@@ -164,16 +168,17 @@ const Projects = () => {
               </div>
             </div>
           )}
-          <AnimatedWrapper direction="left" className="bg-white rounded-md shadow p-3 group hover:-translate-y-1 transition">
+          <AnimatedWrapper direction="left">
+          <div className="bg-white rounded-md shadow p-3 group hover:-translate-y-1 transition">
             <div className="relative mb-4">
               <img
-                src={images2[0]}
+                src={images2[1]}
                 alt="AIDMAN"
-                className="object-cover h-60 w-full rounded transition group-hover:brightness-50"
+                className="object-cover h-60 w-full brightness-50 md:brightness-100 rounded transition group-hover:brightness-50"
               />
               <button
                 onClick={() => setShowModal2(true)}
-                className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition"
+                className="absolute inset-0 flex items-center justify-center md:opacity-0 group-hover:opacity-100 transition"
               >
                 <span className="text-white text-lg font-semibold bg-[#1e2749] px-4 py-2 rounded">
                   View Details
@@ -202,6 +207,7 @@ const Projects = () => {
                 </li>
               </ul>
             </div>
+          </div>
           </AnimatedWrapper>
           {showModal2 && (
             <div className="fixed inset-0 bg-black/70 z-50 flex items-center justify-center">
@@ -237,7 +243,8 @@ const Projects = () => {
             </div>
           )}
 
-          <AnimatedWrapper direction="right" className="bg-[#1e2749]/80 rounded-md shadow p-3 flex flex-col">
+          <AnimatedWrapper direction="right">
+          <div className="bg-[#1e2749]/80 rounded-md shadow p-3 flex flex-col">
             <img
               src="/Graphic.png"
               alt="Lodifhi Website"
@@ -251,7 +258,7 @@ const Projects = () => {
                 This showcases my work in creating engaging social media
                 graphics, promotional materials, and branding designs.
               </p>
-              <div className="my-2 text-xs text-gray-400 flex justify-between items-center">
+              <div className=" text-xs text-gray-400 flex justify-between items-center">
                 <Link
                   to="/graphic-design-portfolio"
                   onClick={() => window.scrollTo(0, 0)}
@@ -261,6 +268,7 @@ const Projects = () => {
                 </Link>
               </div>
             </div>
+          </div>
           </AnimatedWrapper>
         </div>
       </div>
