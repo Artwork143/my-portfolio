@@ -1,6 +1,8 @@
 import React from "react";
 import { useState } from "react";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import AnimatedSection from "./AnimatedSection";
+import AnimatedWrapper from "./AnimatedWrapper";
 
 const Contact = () => {
   const [name, setname] = useState("");
@@ -23,18 +25,21 @@ const Contact = () => {
       className="min-h-screen bg-[#f9f6ee] text-white px-6 md:px-16 lg:px-32 2xl:px-105"
       id="contact"
     >
-      <h1 className=" font-bold text-3xl text-[#1e2749] py-5">Let's Connect</h1>
-
-      <div class="max-w-5xl grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div>
-          {/* <h2 class="text-2xl font-semibold mb-4 text-[#1e2749]">Let's Connect</h2> */}
+      <AnimatedSection>
+        <h1 className=" font-bold text-3xl text-[#1e2749] py-5">
+          Let's Connect
+        </h1>
+      </AnimatedSection>
+      <div class="grid md:grid-cols-2 gap-10 items-start py-10">
+        <AnimatedWrapper direction="left">
           <p class="text-gray-700 mb-6 leading-relaxed">
             I'm open to{" "}
             <span class="font-semibold text-blue-600">
               full-time opportunities
             </span>{" "}
             &{" "}
-            <span class="font-semibold text-blue-600">freelance projects</span>.
+            <span class="font-semibold text-blue-600">freelance projects</span>
+            .
             <br />
             My inbox is always open — whether you have a question,
             <br />
@@ -75,37 +80,38 @@ const Contact = () => {
               </a>
             </li>
           </ul>
-        </div>
-
-        <div className="mx-auto bg-white rounded-2xl shadow-md p-8 mb-10">
-          <h2 className="text-2xl font-semibold mb-4 text-[#1e2749]">
-            Send a Message
-          </h2>
-          <form className="space-y-4" onSubmit={handleSubmit}>
-            <input
-              type="text"
-              placeholder="Your Full Name"
-              value={name}
-              onChange={(e) => setname(e.target.value)}
-              className="w-full border border-gray-300 rounded-lg p-3 focus-within:outline-2 focus-within:outline-[#1e2749] transition duration-400 ease-in-out text-[#1e2749]"
-              required
-            />
-            <textarea
-              placeholder="Your Message"
-              rows="5"
-              value={message}
-              onChange={(e) => setMessage(e.target.value)}
-              className="w-full border border-gray-300 rounded-lg p-3 focus-within:outline-2 focus-within:outline-[#1e2749] transition duration-400 ease-in-out text-[#1e2749]"
-              required
-            />
-            <button
-              type="submit"
-              className="hover:bg-blue-600 text-white px-5 py-2 rounded-lg bg-[#1e2749] transition duration-300 ease-in-out"
-            >
-              Send
-            </button>
-          </form>
-        </div>
+        </AnimatedWrapper>
+        <AnimatedWrapper direction="right">
+          <div className="mx-auto bg-white rounded-tl-2xl rounded-br-2xl shadow-md p-8 mb-10">
+            <h2 className="text-2xl font-semibold mb-4 text-[#1e2749]">
+              Send a Message
+            </h2>
+            <form className="space-y-4" onSubmit={handleSubmit}>
+              <input
+                type="text"
+                placeholder="Your Full Name"
+                value={name}
+                onChange={(e) => setname(e.target.value)}
+                className="w-full border border-gray-300 rounded-lg p-3 focus-within:outline-2 focus-within:outline-[#1e2749] transition duration-400 ease-in-out text-[#1e2749]"
+                required
+              />
+              <textarea
+                placeholder="Your Message"
+                rows="5"
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
+                className="w-full border border-gray-300 rounded-lg p-3 focus-within:outline-2 focus-within:outline-[#1e2749] transition duration-400 ease-in-out text-[#1e2749]"
+                required
+              />
+              <button
+                type="submit"
+                className="hover:bg-blue-600 text-white px-5 py-2 rounded-lg bg-[#1e2749] transition duration-300 ease-in-out"
+              >
+                Send
+              </button>
+            </form>
+          </div>
+        </AnimatedWrapper>
       </div>
     </div>
   );

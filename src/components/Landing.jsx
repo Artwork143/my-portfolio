@@ -26,7 +26,7 @@ const Landing = () => {
         <h1 className="text-5xl md:text-6xl font-bold mb-2">
           Dionisio Miñano<span className="text-transparent">.</span>
         </h1>
-        <h2 className="text-xl md:text-2xl font-medium text-gray-400 mb-6 h-8 overflow-hidden">
+        <h2 className="text-xl md:text-2xl font-medium text-gray-400 mb-6 h-8">
       I'm a Freelance{" "}
       <span
         className={`inline-block text-yellow-400 transform transition-transform duration-700 ease-in-out ${
