@@ -30,7 +30,7 @@ const Contact = () => {
           Let's Connect
         </h1>
       </AnimatedSection>
-      <div class="grid md:grid-cols-2 gap-10 items-start py-10">
+      <div class="grid md:grid-cols-2 gap-10 items-start pb-10">
         <AnimatedWrapper direction="left">
           <p class="text-gray-700 mb-6 leading-relaxed">
             I'm open to{" "}
