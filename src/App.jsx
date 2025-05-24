@@ -20,9 +20,18 @@ function MainContent() {
   const aboutRef = useRef(null);
   const contactRef = useRef(null);
 
-  const scrollToSection = (ref) => {
-    ref.current?.scrollIntoView({ behavior: "smooth" });
-  };
+  const scrollToSection = (ref, offset = -64) => {
+  if (ref.current) {
+    const elementPosition = ref.current.getBoundingClientRect().top + window.pageYOffset;
+    const offsetPosition = elementPosition + offset;
+
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: "smooth",
+    });
+  }
+};
+
 
   return (
     <>

@@ -71,7 +71,7 @@ const Header = ({ onScrollTo }) => {
         scrolled ? "bg-white shadow-md" : "bg-[#1e2749]"
       }`}
     >
-      <div className="mx-auto px-6 md:px-10 py-4 flex items-center justify-between">
+      <div className="mx-auto px-6 md:px-16 lg:px-32 2xl:px-105 py-4 flex items-center justify-between">
         <div className="text-2xl font-bold cursor-pointer">
           <img
             src={scrolled ? "/DM.png" : "/DM2.png"}
