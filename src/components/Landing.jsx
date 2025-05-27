@@ -30,15 +30,15 @@ const Landing = () => {
         <div className="md:hidden block">
           <AnimatedWrapper direction="left">
             <img
-              src="/programmer-vector.png"
+              src="/programmer-vector3.png"
               alt="Programmer Vector"
-              // className="w-full max-w-lg"
+              className="w-full max-w-sm"
             />
           </AnimatedWrapper>
         </div>
 
         <AnimatedSection delay={0.1}>
-          <div className="max-w-3xl">
+          <div className="max-w-3xl md:mt-10">
             <p className="text-base text-white mb-2">Hi, I'm</p>
             <h1 className="text-5xl md:text-6xl font-bold mb-2">
               Dionisio Miñano<span className="text-transparent">.</span>
@@ -110,11 +110,12 @@ const Landing = () => {
             </div>
           </div>
         </AnimatedSection>
-        <div className="hidden md:block">
+        <div className="hidden md:block ml-40">
           <AnimatedWrapper direction="right">
             <img
-              src="/programmer-vector.png"
+              src="/programmer-vector4.png"
               alt="Programmer Vector"
+              className="w-full max-w-sm"
             />
           </AnimatedWrapper>
         </div>
